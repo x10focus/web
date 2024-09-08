@@ -119,18 +119,17 @@
     max-width: 600px; /* Set a maximum width for the list items */
     text-align: left; /* Align the text within list items to the left */
   }
-
-  #how-it-works {
-    margin-bottom: 40px; /* Maintain spacing between this section and the next */
-  }
   
   .section-heading {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 20px;
   }
-  
-  .how-it-works-content {
-    margin: 0 auto; /* Center the content horizontally */
-    max-width: 600px; /* Set a maximum width for the content */
+
+
+  nav {
+    background-color: #333;
+    color: #fff;
+    margin-top: 10px;
   }
+

@@ -28,5 +28,6 @@ permalink: /
 The way x10focus works is by seamlessly connecting tasks from your Google Calendar. This integration makes it incredibly convenient to see both your scheduled tasks and upcoming events in one unified view. With this consolidated perspective, you can easily prioritize your work and take timely actions based on your schedule. By bringing tasks and events together, x10focus ensures that you stay organized and efficient, maximizing your productivity throughout the day.
 
 
-### Contact
+## Contact
+
 For inquiries, contact us at [contact@x10focus.com](mailto:contact@x10focus.com).
