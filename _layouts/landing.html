@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ page.title }}</title>
+    
+    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="transparent-header">
+        <nav>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="{{ '/privacy-policy/' | relative_url }}">Privacy Policy</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <div class="hero">
+          <h1>X10focus: A Pomodoro Timer for You</h1>
+          <p class="subtext">
+            Smart way of increasing productivity/efficiency and eliminating
+            distractions for IT engineers & managers.
+          </p>
+          <a href="#" class="app-store-btn">Get it on the App Store</a>
+          <br />
+          <img
+            src="{{ '/assets/product-screenshot.png' | relative_url }}"
+            alt="Product Screenshot"
+            class="product-screenshot"
+          />
+        </div>
+
+        {{ content }}
+      </main>
+    </div>
+
+    <footer class="transparent-footer">
+      <p>&copy; 2024 x10focus. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
