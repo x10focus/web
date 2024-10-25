@@ -1,189 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>X10focus: Coming Soon - Smart Pomodoro Timer for IT Professionals</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      X10focus: Coming Soon - Smart Pomodoro Timer for IT Professionals
+    </title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"></script>
-</head>
-<body class="font-sans">
+    <style>
+      .pgrid2024__container {
+        display: grid;
+        grid-template-columns: repeat(52, 15px);
+        gap: 2px;
+        padding: 20px;
+      }
+
+      .pgrid2024__cell {
+        width: 15px;
+        height: 15px;
+        border-radius: 3px;
+        background-color: #ebedf0;
+      }
+
+      .pgrid2024__cell--active {
+        animation: pgrid2024__pulse-animation 3s infinite;
+        animation-delay: var(--pgrid2024-delay);
+      }
+
+      @keyframes pgrid2024__pulse-animation {
+        0% {
+          background-color: #8db8fc;
+        }
+        50% {
+          background-color: #3b82f6;
+        }
+        100% {
+          background-color: #8db8fc;
+        }
+      }
+    </style>
+  </head>
+  <body class="font-sans">
     <header class="bg-white shadow-sm">
-        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="/" class="font-bold text-xl">X10focus</a>
-            <div>
-                <a href="#features" class="mx-3">Features</a>
-                <a href="#how-it-works" class="mx-3">How It Works</a>
-                <a href="#pricing" class="mx-3">Pricing</a>
-                <a href="#faq" class="mx-3">FAQ</a>
-            </div>
-            <a href="https://forms.gle/LmoQsjWRyxNNuqqs8" class="bg-blue-500 text-white px-4 py-2 rounded-lg">Join Waitlist</a>
-        </nav>
+      <nav
+        class="container mx-auto px-6 py-3 flex justify-between items-center"
+      >
+        <a href="/" class="font-bold text-xl">X10focus</a>
+        <div>
+          <a href="#features" class="mx-3">Features</a>
+          <a href="#how-it-works" class="mx-3">How It Works</a>
+          <a href="#pricing" class="mx-3">Pricing</a>
+          <a href="#faq" class="mx-3">FAQ</a>
+        </div>
+        <a
+          href="https://forms.gle/LmoQsjWRyxNNuqqs8"
+          class="bg-blue-500 text-white px-4 py-2 rounded-lg"
+          >Join Waitlist</a
+        >
+      </nav>
     </header>
 
     <main>
-        <section id="hero" class="bg-gray-100 py-20">
-            <div class="container mx-auto px-6 text-center">
-                <h1 class="text-4xl font-bold mb-4">X10focus: Boost Your Productivity 10x</h1>
-                <p class="text-xl mb-8">Smart Pomodoro timer for IT engineers & managers. Coming soon!</p>
-                <a href="https://forms.gle/LmoQsjWRyxNNuqqs8" class="bg-blue-500 text-white px-6 py-3 rounded-lg text-lg">Join the Waitlist</a>
-                <p class="mt-4 text-gray-600">Be the first to know when we launch and get exclusive early access!</p>
-                <img src="/assets/product-screenshot.png" alt="X10focus App Preview" class="mt-12 mx-auto max-w-3xl rounded-lg shadow-lg">
-            </div>
-        </section>
-
-        <section id="features" class="py-20">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center mb-12">Powerful Features for Maximum Productivity</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <div class="text-blue-500 mb-4">
-                            <i data-feather="clock" class="w-12 h-12"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Smart Pomodoro Timer</h3>
-                        <p>Customizable work sessions and breaks to match your productivity rhythm.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <div class="text-blue-500 mb-4">
-                            <i data-feather="trending-up" class="w-12 h-12"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Consistency Tracker</h3>
-                        <p>Visualize your progress with consistently filled cells, motivating you to maintain your focus streak.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <div class="text-blue-500 mb-4">
-                            <i data-feather="layers" class="w-12 h-12"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Project Management</h3>
-                        <p>Handle repeated tasks and larger challenges, perfect for studying, reading, or code reviews.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <div class="text-blue-500 mb-4">
-                            <i data-feather="refresh-cw" class="w-12 h-12"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Sync with Notion & Google</h3>
-                        <p>Seamlessly integrate your tasks with Notion database and Google services.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <div class="text-blue-500 mb-4">
-                            <i data-feather="bar-chart-2" class="w-12 h-12"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Advanced Analytics</h3>
-                        <p>Gain insights into your productivity patterns and improve your work habits.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <div class="text-blue-500 mb-4">
-                            <i data-feather="bell" class="w-12 h-12"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Smart Notifications</h3>
-                        <p>Stay on track with customizable, non-intrusive reminders and updates.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="how-it-works" class="bg-gray-100 py-20">
-          <div class="container mx-auto px-6">
-              <h2 class="text-3xl font-bold text-center mb-12">How It Works</h2>
-              <div class="flex flex-col md:flex-row justify-center items-stretch gap-8">
-                  <div class="rounded-lg shadow-md p-8 flex flex-col">
-                      <h3 class="text-2xl font-semibold mb-4">Old Way: Scattered Focus</h3>
-                      <ul class="list-disc list-inside">
-                          <li>Constant distractions</li>
-                          <li>Difficulty tracking progress</li>
-                          <li>Inconsistent work patterns</li>
-                      </ul>
-                  </div>
-                  <div class="rounded-lg shadow-md p-8 flex flex-col">
-                      <h3 class="text-2xl font-semibold mb-4">X10focus Way: Laser-Sharp Productivity</h3>
-                      <ul class="list-disc list-inside">
-                          <li>Focused work sessions</li>
-                          <li>Clear progress visualization</li>
-                          <li>Consistent productivity habits</li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
-      </section>
-      
-
-       <section id="pricing" class="py-20">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12">Simple Pricing</h2>
-            <div class="flex flex-col md:flex-row justify-center items-stretch gap-8">
-                <div class="bg-white rounded-lg shadow-md p-8 flex flex-col">
-                    <h3 class="text-2xl font-semibold mb-4">Free</h3>
-                    <p class="text-4xl font-bold mb-6">$0<span class="text-sm font-normal">/month</span></p>
-                    <ul class="mb-8 flex-grow">
-                        <li class="mb-2">✓ Basic Pomodoro timer</li>
-                        <li class="mb-2">✓ Task list</li>
-                        <li class="mb-2">✓ Sync with Google Tasks</li>
-                    </ul>
-                    <a href="https://files.x10focus.com/X10Focus.dmg" class="bg-blue-500 text-white px-4 py-2 rounded-lg text-center">Download</a>
-                </div>
-                <div class="bg-blue-50 rounded-lg shadow-md p-8 flex flex-col">
-                    <h3 class="text-2xl font-semibold mb-4">Pro</h3>
-                    <p class="text-4xl font-bold mb-6">$0.99<span class="text-sm font-normal">/month</span></p>
-                    <ul class="mb-8 flex-grow">
-                        <li class="mb-2">✓ All Free features</li>
-                        <li class="mb-2">✓ Sync with Notion & Google</li>
-                        <li class="mb-2">✓ Consistency tracker</li>
-                        <li class="mb-2">✓ Project management</li>
-                        <li class="mb-2">✓ Advanced analytics</li>
-                        <li class="mb-2">✓ Daily statistics</li>
-                    </ul>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeiLSByNwq414HPVCAd7261px29Fr0j1vxTd4QPr0f64wsZsg/viewform?usp=pp_url&entry.6494024=Yes" class="bg-blue-500 text-white px-4 py-2 rounded-lg text-center">Upgrade to Pro</a>
-                </div>
-            </div>
+      <section id="hero" class="bg-gray-100 py-20">
+        <div class="container mx-auto px-6 text-center">
+          <h1 class="text-4xl font-bold mb-4">
+            X10focus: Boost Your Productivity 10x
+          </h1>
+          <p class="text-xl mb-8">
+            Smart Pomodoro timer for IT engineers & managers. Coming soon!
+          </p>
+          <a
+            href="https://forms.gle/LmoQsjWRyxNNuqqs8"
+            class="bg-blue-500 text-white px-6 py-3 rounded-lg text-lg"
+            >Join the Waitlist</a
+          >
+          <p class="mt-4 text-gray-600">
+            Be the first to know when we launch and get exclusive early access!
+          </p>
+          <img
+            src="/assets/product-screenshot.png"
+            alt="X10focus App Preview"
+            class="mt-12 mx-auto max-w-3xl rounded-lg shadow-lg"
+          />
         </div>
       </section>
 
-        <section id="signup" class="py-20 bg-blue-50">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold mb-8">Be the First to Experience X10focus</h2>
-                <p class="text-xl mb-8">Join our waitlist to get early access and exclusive offers when we launch!</p>
-                <a href="https://forms.gle/LmoQsjWRyxNNuqqs8" class="bg-blue-500 text-white px-6 py-3 rounded-lg text-lg">Join the Waitlist</a>
-                <p class="mt-4 text-sm text-gray-600">We respect your privacy. Unsubscribe at any time.</p>
-            </div>
-        </section>
+      <section id="productivity" class="py-20">
+        <div class="container mx-auto px-6">
+          <div class="pgrid2024__container" id="pulsingGrid"></div>
 
-        <section id="faq" class="bg-gray-100 py-20">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
-                <div class="space-y-8">
-                    <div>
-                        <h3 class="text-xl font-semibold mb-2">When will X10focus PRO version be available?</h3>
-                        <p>We're working hard to bring X10focus PRO to you as soon as possible. Join our waitlist to be notified about our launch date and get early access!</p>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-semibold mb-2">Will there be a free version available?</h3>
-                        <p>It is already available for download. Check <a href="#pricing">pricing</a> section.</p>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-semibold mb-2">How can I stay updated on the development progress?</h3>
-                        <p>The best way to stay informed is to join our waitlist. We'll send regular updates about our progress and exciting new features we're working on.</p>
-                    </div>
-                </div>
+          <script>
+            const gridContainer = document.getElementById("pulsingGrid");
+            const rows = 7;
+            const cols = 52;
+            const totalCells = rows * cols;
+            const activePercentage = 0.8;
+
+            // Create grid
+            for (let i = 0; i < rows; i++) {
+              for (let j = 0; j < cols; j++) {
+                const cell = document.createElement("div");
+                cell.className = "pgrid2024__cell";
+                gridContainer.appendChild(cell);
+              }
+            }
+
+            // Calculate how many cells should be active
+            const numberOfActiveCells = Math.floor(
+              totalCells * activePercentage
+            );
+
+            // Create array of all cell indices and shuffle it
+            let allIndices = Array.from({ length: totalCells }, (_, i) => i);
+            for (let i = allIndices.length - 1; i > 0; i--) {
+              const j = Math.floor(Math.random() * (i + 1));
+              [allIndices[i], allIndices[j]] = [allIndices[j], allIndices[i]];
+            }
+
+            // Take the first 80% of shuffled indices and activate those cells
+            allIndices.slice(0, numberOfActiveCells).forEach((index) => {
+              const cell = gridContainer.children[index];
+              cell.classList.add("pgrid2024__cell--active");
+              cell.style.setProperty(
+                "--pgrid2024-delay",
+                `${Math.random() * -6}s`
+              );
+            });
+          </script>
+        </div>
+      </section>
+      <section id="features" class="py-20">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center mb-12">
+            Powerful Features for Maximum Productivity
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <div class="text-blue-500 mb-4">
+                <i data-feather="clock" class="w-12 h-12"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Smart Pomodoro Timer</h3>
+              <p>
+                Customizable work sessions and breaks to match your productivity
+                rhythm.
+              </p>
             </div>
-        </section>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <div class="text-blue-500 mb-4">
+                <i data-feather="trending-up" class="w-12 h-12"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Consistency Tracker</h3>
+              <p>
+                Visualize your progress with consistently filled cells,
+                motivating you to maintain your focus streak.
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <div class="text-blue-500 mb-4">
+                <i data-feather="layers" class="w-12 h-12"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Project Management</h3>
+              <p>
+                Handle repeated tasks and larger challenges, perfect for
+                studying, reading, or code reviews.
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <div class="text-blue-500 mb-4">
+                <i data-feather="refresh-cw" class="w-12 h-12"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">
+                Sync with Notion & Google
+              </h3>
+              <p>
+                Seamlessly integrate your tasks with Notion database and Google
+                services.
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <div class="text-blue-500 mb-4">
+                <i data-feather="bar-chart-2" class="w-12 h-12"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Advanced Analytics</h3>
+              <p>
+                Gain insights into your productivity patterns and improve your
+                work habits.
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <div class="text-blue-500 mb-4">
+                <i data-feather="bell" class="w-12 h-12"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Smart Notifications</h3>
+              <p>
+                Stay on track with customizable, non-intrusive reminders and
+                updates.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="bg-gray-100 py-20">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center mb-12">How It Works</h2>
+          <div
+            class="flex flex-col md:flex-row justify-center items-stretch gap-8"
+          >
+            <div class="rounded-lg shadow-md p-8 flex flex-col">
+              <h3 class="text-2xl font-semibold mb-4">
+                Old Way: Scattered Focus
+              </h3>
+              <ul class="list-disc list-inside">
+                <li>Constant distractions</li>
+                <li>Difficulty tracking progress</li>
+                <li>Inconsistent work patterns</li>
+              </ul>
+            </div>
+            <div class="rounded-lg shadow-md p-8 flex flex-col">
+              <h3 class="text-2xl font-semibold mb-4">
+                X10focus Way: Laser-Sharp Productivity
+              </h3>
+              <ul class="list-disc list-inside">
+                <li>Focused work sessions</li>
+                <li>Clear progress visualization</li>
+                <li>Consistent productivity habits</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" class="py-20">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center mb-12">Simple Pricing</h2>
+          <div
+            class="flex flex-col md:flex-row justify-center items-stretch gap-8"
+          >
+            <div class="bg-white rounded-lg shadow-md p-8 flex flex-col">
+              <h3 class="text-2xl font-semibold mb-4">Free</h3>
+              <p class="text-4xl font-bold mb-6">
+                $0<span class="text-sm font-normal">/month</span>
+              </p>
+              <ul class="mb-8 flex-grow">
+                <li class="mb-2">✓ Basic Pomodoro timer</li>
+                <li class="mb-2">✓ Task list</li>
+                <li class="mb-2">✓ Sync with Google Tasks</li>
+              </ul>
+              <a
+                href="https://files.x10focus.com/X10Focus.dmg"
+                class="bg-blue-500 text-white px-4 py-2 rounded-lg text-center"
+                >Download</a
+              >
+            </div>
+            <div class="bg-blue-50 rounded-lg shadow-md p-8 flex flex-col">
+              <h3 class="text-2xl font-semibold mb-4">Pro</h3>
+              <p class="text-4xl font-bold mb-6">
+                $0.99<span class="text-sm font-normal">/month</span>
+              </p>
+              <ul class="mb-8 flex-grow">
+                <li class="mb-2">✓ All Free features</li>
+                <li class="mb-2">✓ Sync with Notion & Google</li>
+                <li class="mb-2">✓ Consistency tracker</li>
+                <li class="mb-2">✓ Project management</li>
+                <li class="mb-2">✓ Advanced analytics</li>
+                <li class="mb-2">✓ Daily statistics</li>
+              </ul>
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeiLSByNwq414HPVCAd7261px29Fr0j1vxTd4QPr0f64wsZsg/viewform?usp=pp_url&entry.6494024=Yes"
+                class="bg-blue-500 text-white px-4 py-2 rounded-lg text-center"
+                >Upgrade to Pro</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="signup" class="py-20 bg-blue-50">
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-3xl font-bold mb-8">
+            Be the First to Experience X10focus
+          </h2>
+          <p class="text-xl mb-8">
+            Join our waitlist to get early access and exclusive offers when we
+            launch!
+          </p>
+          <a
+            href="https://forms.gle/LmoQsjWRyxNNuqqs8"
+            class="bg-blue-500 text-white px-6 py-3 rounded-lg text-lg"
+            >Join the Waitlist</a
+          >
+          <p class="mt-4 text-sm text-gray-600">
+            We respect your privacy. Unsubscribe at any time.
+          </p>
+        </div>
+      </section>
+
+      <section id="faq" class="bg-gray-100 py-20">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center mb-12">
+            Frequently Asked Questions
+          </h2>
+          <div class="space-y-8">
+            <div>
+              <h3 class="text-xl font-semibold mb-2">
+                When will X10focus PRO version be available?
+              </h3>
+              <p>
+                We're working hard to bring X10focus PRO to you as soon as
+                possible. Join our waitlist to be notified about our launch date
+                and get early access!
+              </p>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">
+                Will there be a free version available?
+              </h3>
+              <p>
+                It is already available for download. Check
+                <a href="#pricing">pricing</a> section.
+              </p>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">
+                How can I stay updated on the development progress?
+              </h3>
+              <p>
+                The best way to stay informed is to join our waitlist. We'll
+                send regular updates about our progress and exciting new
+                features we're working on.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <p>&copy; 2024 X10focus. All rights reserved.</p>
-                </div>
-                <div class="flex space-x-4">
-                    <a href="/privacy-policy">Privacy Policy</a>
-                    <a href="/terms-of-service">Terms of Service</a>
-                </div>
-            </div>
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-4 md:mb-0">
+            <p>&copy; 2024 X10focus. All rights reserved.</p>
+          </div>
+          <div class="flex space-x-4">
+            <a href="/privacy-policy">Privacy Policy</a>
+            <a href="/terms-of-service">Terms of Service</a>
+          </div>
         </div>
+      </div>
     </footer>
 
     <script>
-        feather.replace()
+      feather.replace();
     </script>
-</body>
+  </body>
 </html>
