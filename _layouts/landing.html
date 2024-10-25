@@ -12,26 +12,34 @@
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"></script>
     <style>
-      .pgrid2024__container {
-        display: grid;
-        grid-template-columns: repeat(52, 15px);
-        gap: 2px;
+      .contgrid2024__wrapper {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+          Arial, sans-serif;
+        color: #57606a;
         padding: 20px;
+        width: fit-content; /* Contain the contents */
       }
 
-      .pgrid2024__cell {
+      .contgrid2024__container {
+        display: grid;
+        grid-template-columns: auto repeat(53, 15px);
+        gap: 2px;
+        margin-top: 20px;
+      }
+
+      .contgrid2024__cell {
         width: 15px;
         height: 15px;
         border-radius: 3px;
         background-color: #ebedf0;
       }
 
-      .pgrid2024__cell--active {
-        animation: pgrid2024__pulse-animation 3s infinite;
-        animation-delay: var(--pgrid2024-delay);
+      .contgrid2024__cell--active {
+        animation: contgrid2024__pulse-animation 3s infinite;
+        animation-delay: var(--contgrid2024-delay);
       }
 
-      @keyframes pgrid2024__pulse-animation {
+      @keyframes contgrid2024__pulse-animation {
         0% {
           background-color: #8db8fc;
         }
@@ -41,6 +49,47 @@
         100% {
           background-color: #8db8fc;
         }
+      }
+
+      .contgrid2024__weekday {
+        height: 15px;
+        line-height: 15px;
+        font-size: 12px;
+        padding-right: 8px;
+        text-align: right;
+        width: 29px; /* Fixed width for weekday column */
+      }
+
+      .contgrid2024__months {
+        display: grid;
+        grid-template-columns: 29px repeat(53, 15px); /* Match grid columns exactly */
+        gap: 2px;
+        margin-bottom: 4px;
+        font-size: 12px;
+      }
+
+      .contgrid2024__month {
+        grid-column-start: var(--start-col);
+        grid-column-end: var(--end-col);
+      }
+
+      .contgrid2024__legend {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 4px;
+        margin-top: 16px;
+        font-size: 12px;
+      }
+
+      .contgrid2024__legend-item {
+        width: 15px;
+        height: 15px;
+        border-radius: 3px;
+      }
+
+      .contgrid2024__legend-text {
+        margin-right: 8px;
       }
     </style>
   </head>
@@ -57,9 +106,9 @@
           <a href="#faq" class="mx-3">FAQ</a>
         </div>
         <a
-          href="https://forms.gle/LmoQsjWRyxNNuqqs8"
+          href="https://files.x10focus.com/X10Focus.dmg"
           class="bg-blue-500 text-white px-4 py-2 rounded-lg"
-          >Join Waitlist</a
+          >Download</a
         >
       </nav>
     </header>
@@ -73,38 +122,94 @@
           <p class="text-xl mb-8">
             Smart Pomodoro timer for IT engineers & managers. Coming soon!
           </p>
-          <a
-            href="https://forms.gle/LmoQsjWRyxNNuqqs8"
-            class="bg-blue-500 text-white px-6 py-3 rounded-lg text-lg"
-            >Join the Waitlist</a
-          >
-          <p class="mt-4 text-gray-600">
-            Be the first to know when we launch and get exclusive early access!
-          </p>
-          <img
-            src="/assets/product-screenshot.png"
-            alt="X10focus App Preview"
-            class="mt-12 mx-auto max-w-3xl rounded-lg shadow-lg"
-          />
-        </div>
-      </section>
 
-      <section id="productivity" class="py-20">
-        <div class="container mx-auto px-6">
-          <div class="pgrid2024__container" id="pulsingGrid"></div>
-
+          <div class="container mx-auto px-6 flex justify-center">
+            <div class="contgrid2024__wrapper">
+              <div class="contgrid2024__months" id="months"></div>
+              <div class="contgrid2024__container" id="grid"></div>
+              <div class="contgrid2024__legend">
+                <span class="contgrid2024__legend-text">Less</span>
+                <div
+                  class="contgrid2024__legend-item"
+                  style="background-color: #ebedf0"
+                ></div>
+                <div
+                  class="contgrid2024__legend-item"
+                  style="background-color: #8db8fc"
+                ></div>
+                <div
+                  class="contgrid2024__legend-item"
+                  style="background-color: #6ea4f8"
+                ></div>
+                <div
+                  class="contgrid2024__legend-item"
+                  style="background-color: #4f91f7"
+                ></div>
+                <div
+                  class="contgrid2024__legend-item"
+                  style="background-color: #3b82f6"
+                ></div>
+                <span class="contgrid2024__legend-text">More</span>
+              </div>
+            </div>
+          </div>
           <script>
-            const gridContainer = document.getElementById("pulsingGrid");
-            const rows = 7;
-            const cols = 52;
+            const monthsData = [
+              { name: "Oct", weeks: 4, start: 2 },
+              { name: "Nov", weeks: 4, start: 6 },
+              { name: "Dec", weeks: 5, start: 10 },
+              { name: "Jan", weeks: 4, start: 15 },
+              { name: "Feb", weeks: 4, start: 19 },
+              { name: "Mar", weeks: 4, start: 23 },
+              { name: "Apr", weeks: 4, start: 27 },
+              { name: "May", weeks: 4, start: 31 },
+              { name: "Jun", weeks: 4, start: 35 },
+              { name: "Jul", weeks: 4, start: 39 },
+              { name: "Aug", weeks: 4, start: 43 },
+              { name: "Sep", weeks: 4, start: 47 },
+              { name: "Oct", weeks: 4, start: 51 },
+            ];
+            const weekdays = ["Mon", "Wed", "Fri"];
+
+            // Add months
+            const monthsContainer = document.getElementById("months");
+
+            // Add empty first cell for alignment with weekday labels
+            const spacer = document.createElement("div");
+            monthsContainer.appendChild(spacer);
+
+            // Add months with precise positioning
+            monthsData.forEach((month) => {
+              const monthEl = document.createElement("div");
+              monthEl.className = "contgrid2024__month";
+              monthEl.textContent = month.name;
+              monthEl.style.setProperty("--start-col", month.start);
+              monthEl.style.setProperty("--end-col", month.start + month.weeks);
+              monthsContainer.appendChild(monthEl);
+            });
+
+            // Create grid with weekday labels
+            const gridContainer = document.getElementById("grid");
+
+            // Add weekday labels
+            weekdays.forEach((day, i) => {
+              const weekdayLabel = document.createElement("div");
+              weekdayLabel.className = "contgrid2024__weekday";
+              weekdayLabel.textContent = day;
+              weekdayLabel.style.gridRow = i * 2 + 1;
+              gridContainer.appendChild(weekdayLabel);
+            });
+
+            // Create cells
+            const rows = 5;
+            const cols = 53;
             const totalCells = rows * cols;
             const activePercentage = 0.8;
 
-            // Create grid
             for (let i = 0; i < rows; i++) {
               for (let j = 0; j < cols; j++) {
                 const cell = document.createElement("div");
-                cell.className = "pgrid2024__cell";
+                cell.className = "contgrid2024__cell";
                 gridContainer.appendChild(cell);
               }
             }
@@ -123,16 +228,31 @@
 
             // Take the first 80% of shuffled indices and activate those cells
             allIndices.slice(0, numberOfActiveCells).forEach((index) => {
-              const cell = gridContainer.children[index];
-              cell.classList.add("pgrid2024__cell--active");
+              const cell = gridContainer.children[index + weekdays.length];
+              cell.classList.add("contgrid2024__cell--active");
               cell.style.setProperty(
-                "--pgrid2024-delay",
-                `${Math.random() * -6}s`
+                "--contgrid2024-delay",
+                `${Math.random() * -3}s`
               );
             });
           </script>
+
+          <a
+            href="https://forms.gle/LmoQsjWRyxNNuqqs8"
+            class="bg-blue-500 text-white px-6 py-3 rounded-lg text-lg"
+            >Join the Waitlist</a
+          >
+          <p class="mt-4 text-gray-600">
+            Be the first to know when we launch and get exclusive early access!
+          </p>
+          <img
+            src="/assets/product-screenshot.png"
+            alt="X10focus App Preview"
+            class="mt-12 mx-auto max-w-3xl rounded-lg shadow-lg"
+          />
         </div>
       </section>
+
       <section id="features" class="py-20">
         <div class="container mx-auto px-6">
           <h2 class="text-3xl font-bold text-center mb-12">
