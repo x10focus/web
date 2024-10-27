@@ -199,6 +199,121 @@
             <p class="mb-8">
               Smart Pomodoro timer for IT engineers & managers.
             </p>
+
+            <div class="container mx-auto px-6 flex justify-center">
+              <div class="contgrid2024__wrapper">
+                <div class="contgrid2024__months" id="months"></div>
+                <div class="contgrid2024__container" id="grid"></div>
+                <div class="contgrid2024__legend">
+                  <span class="contgrid2024__legend-text">Less</span>
+                  <div
+                    class="contgrid2024__legend-item"
+                    style="background-color: #ebedf0"
+                  ></div>
+                  <div
+                    class="contgrid2024__legend-item"
+                    style="background-color: #8db8fc"
+                  ></div>
+                  <div
+                    class="contgrid2024__legend-item"
+                    style="background-color: #6ea4f8"
+                  ></div>
+                  <div
+                    class="contgrid2024__legend-item"
+                    style="background-color: #4f91f7"
+                  ></div>
+                  <div
+                    class="contgrid2024__legend-item"
+                    style="background-color: #3b82f6"
+                  ></div>
+                  <span class="contgrid2024__legend-text">More</span>
+                </div>
+              </div>
+            </div>
+            <script>
+              const monthsData = [
+                { name: "Oct", weeks: 4, start: 2 },
+                { name: "Nov", weeks: 4, start: 6 },
+                { name: "Dec", weeks: 5, start: 10 },
+                { name: "Jan", weeks: 4, start: 15 },
+                { name: "Feb", weeks: 4, start: 19 },
+                { name: "Mar", weeks: 4, start: 23 },
+                { name: "Apr", weeks: 4, start: 27 },
+                { name: "May", weeks: 4, start: 31 },
+                { name: "Jun", weeks: 4, start: 35 },
+                { name: "Jul", weeks: 4, start: 39 },
+                { name: "Aug", weeks: 4, start: 43 },
+                { name: "Sep", weeks: 4, start: 47 },
+                { name: "Oct", weeks: 4, start: 51 },
+              ];
+              const weekdays = ["Mon", "Wed", "Fri"];
+  
+              // Add months
+              const monthsContainer = document.getElementById("months");
+  
+              // Add empty first cell for alignment with weekday labels
+              const spacer = document.createElement("div");
+              monthsContainer.appendChild(spacer);
+  
+              // Add months with precise positioning
+              monthsData.forEach((month) => {
+                const monthEl = document.createElement("div");
+                monthEl.className = "contgrid2024__month";
+                monthEl.textContent = month.name;
+                monthEl.style.setProperty("--start-col", month.start);
+                monthEl.style.setProperty("--end-col", month.start + month.weeks);
+                monthsContainer.appendChild(monthEl);
+              });
+  
+              // Create grid with weekday labels
+              const gridContainer = document.getElementById("grid");
+  
+              // Add weekday labels
+              weekdays.forEach((day, i) => {
+                const weekdayLabel = document.createElement("div");
+                weekdayLabel.className = "contgrid2024__weekday";
+                weekdayLabel.textContent = day;
+                weekdayLabel.style.gridRow = i * 2 + 1;
+                gridContainer.appendChild(weekdayLabel);
+              });
+  
+              // Create cells
+              const rows = 5;
+              const cols = 53;
+              const totalCells = rows * cols;
+              const activePercentage = 0.8;
+  
+              for (let i = 0; i < rows; i++) {
+                for (let j = 0; j < cols; j++) {
+                  const cell = document.createElement("div");
+                  cell.className = "contgrid2024__cell";
+                  gridContainer.appendChild(cell);
+                }
+              }
+  
+              // Calculate how many cells should be active
+              const numberOfActiveCells = Math.floor(
+                totalCells * activePercentage
+              );
+  
+              // Create array of all cell indices and shuffle it
+              let allIndices = Array.from({ length: totalCells }, (_, i) => i);
+              for (let i = allIndices.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [allIndices[i], allIndices[j]] = [allIndices[j], allIndices[i]];
+              }
+  
+              // Take the first 80% of shuffled indices and activate those cells
+              allIndices.slice(0, numberOfActiveCells).forEach((index) => {
+                const cell = gridContainer.children[index + weekdays.length];
+                cell.classList.add("contgrid2024__cell--active");
+                cell.style.setProperty(
+                  "--contgrid2024-delay",
+                  `${Math.random() * -6}s`
+                );
+              });
+            </script>
+            
             <a
               href="https://files.x10focus.com/X10Focus.dmg"
               class="inline-block bg-blue-500 text-white px-6 py-3 rounded-lg text-lg hover:bg-blue-600 transition"
