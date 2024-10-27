@@ -10,6 +10,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
     />
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"></script>
     <style>
       .contgrid2024__wrapper {
@@ -95,161 +99,126 @@
   </head>
   <body class="font-sans">
     <header class="bg-white shadow-sm">
-      <nav
-        class="container mx-auto px-6 py-3 flex justify-between items-center"
-      >
-        <a href="/" class="font-bold text-xl">X10focus</a>
-        <div>
-          <a href="#features" class="mx-3">Features</a>
-          <a href="#how-it-works" class="mx-3">How It Works</a>
-          <a href="#pricing" class="mx-3">Pricing</a>
-          <a href="#faq" class="mx-3">FAQ</a>
-        </div>
-        <a
-          href="https://files.x10focus.com/X10Focus.dmg"
-          class="bg-blue-500 text-white px-4 py-2 rounded-lg"
-          >Download</a
-        >
-      </nav>
+      <div class="container mx-auto px-4">
+        <nav x-data="{ isOpen: false }" class="relative">
+          <div class="flex justify-between items-center py-4">
+            <!-- Logo -->
+            <a href="/" class="font-bold text-xl">X10focus</a>
+
+            <!-- Mobile Menu Button -->
+            <button
+              @click="isOpen = !isOpen"
+              class="md:hidden focus:outline-none"
+              aria-label="Toggle menu"
+            >
+              <svg
+                x-show="!isOpen"
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+              <svg
+                x-show="isOpen"
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-6">
+              <a href="#features" class="hover:text-blue-500">Features</a>
+              <a href="#how-it-works" class="hover:text-blue-500"
+                >How It Works</a
+              >
+              <a href="#pricing" class="hover:text-blue-500">Pricing</a>
+              <a href="#faq" class="hover:text-blue-500">FAQ</a>
+              <a
+                href="https://files.x10focus.com/X10Focus.dmg"
+                class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition"
+              >
+                Download
+              </a>
+            </div>
+          </div>
+
+          <!-- Mobile Navigation -->
+          <div
+            x-show="isOpen"
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 -translate-y-1"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-150"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-1"
+            class="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg rounded-b-lg"
+          >
+            <div class="px-4 py-3 space-y-3">
+              <a href="#features" class="block hover:text-blue-500">Features</a>
+              <a href="#how-it-works" class="block hover:text-blue-500"
+                >How It Works</a
+              >
+              <a href="#pricing" class="block hover:text-blue-500">Pricing</a>
+              <a href="#faq" class="block hover:text-blue-500">FAQ</a>
+              <a
+                href="https://files.x10focus.com/X10Focus.dmg"
+                class="block bg-blue-500 text-white px-4 py-2 rounded-lg text-center hover:bg-blue-600 transition"
+              >
+                Download
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <main>
-      <section id="hero" class="bg-gray-100 py-20">
-        <div class="container mx-auto px-6 text-center">
-          <h1 class="text-4xl font-bold mb-4">
-            X10focus: Boost Your Productivity 10x
-          </h1>
-          <p class="text-xl mb-8">
-            Smart Pomodoro timer for IT engineers & managers.
-          </p>
+      <!-- Hero Section -->
+      <section class="bg-gray-100 py-20">
+        <div class="container mx-auto px-4">
+          <div class="text-center">
+            <h1 class="text-4xl font-bold mb-4">
+              X10focus: Boost Your Productivity 10x
+            </h1>
+            <p class="mb-8">
+              Smart Pomodoro timer for IT engineers & managers.
+            </p>
+            <a
+              href="https://files.x10focus.com/X10Focus.dmg"
+              class="inline-block bg-blue-500 text-white px-6 py-3 rounded-lg text-lg hover:bg-blue-600 transition"
+            >
+              Download
+            </a>
+            <p class="mt-6">
+              Be the first to know when we launch and get exclusive early
+              access!
+            </p>
 
-          <div class="container mx-auto px-6 flex justify-center">
-            <div class="contgrid2024__wrapper">
-              <div class="contgrid2024__months" id="months"></div>
-              <div class="contgrid2024__container" id="grid"></div>
-              <div class="contgrid2024__legend">
-                <span class="contgrid2024__legend-text">Less</span>
-                <div
-                  class="contgrid2024__legend-item"
-                  style="background-color: #ebedf0"
-                ></div>
-                <div
-                  class="contgrid2024__legend-item"
-                  style="background-color: #8db8fc"
-                ></div>
-                <div
-                  class="contgrid2024__legend-item"
-                  style="background-color: #6ea4f8"
-                ></div>
-                <div
-                  class="contgrid2024__legend-item"
-                  style="background-color: #4f91f7"
-                ></div>
-                <div
-                  class="contgrid2024__legend-item"
-                  style="background-color: #3b82f6"
-                ></div>
-                <span class="contgrid2024__legend-text">More</span>
-              </div>
+            <!-- Responsive Product Screenshot -->
+            <div class="mt-12">
+              <img
+                src="/assets/product-screenshot.png"
+                alt="X10focus App Preview"
+                class="w-full max-w-3xl mx-auto rounded-lg shadow-lg object-contain px-4"
+              />
             </div>
           </div>
-          <script>
-            const monthsData = [
-              { name: "Oct", weeks: 4, start: 2 },
-              { name: "Nov", weeks: 4, start: 6 },
-              { name: "Dec", weeks: 5, start: 10 },
-              { name: "Jan", weeks: 4, start: 15 },
-              { name: "Feb", weeks: 4, start: 19 },
-              { name: "Mar", weeks: 4, start: 23 },
-              { name: "Apr", weeks: 4, start: 27 },
-              { name: "May", weeks: 4, start: 31 },
-              { name: "Jun", weeks: 4, start: 35 },
-              { name: "Jul", weeks: 4, start: 39 },
-              { name: "Aug", weeks: 4, start: 43 },
-              { name: "Sep", weeks: 4, start: 47 },
-              { name: "Oct", weeks: 4, start: 51 },
-            ];
-            const weekdays = ["Mon", "Wed", "Fri"];
-
-            // Add months
-            const monthsContainer = document.getElementById("months");
-
-            // Add empty first cell for alignment with weekday labels
-            const spacer = document.createElement("div");
-            monthsContainer.appendChild(spacer);
-
-            // Add months with precise positioning
-            monthsData.forEach((month) => {
-              const monthEl = document.createElement("div");
-              monthEl.className = "contgrid2024__month";
-              monthEl.textContent = month.name;
-              monthEl.style.setProperty("--start-col", month.start);
-              monthEl.style.setProperty("--end-col", month.start + month.weeks);
-              monthsContainer.appendChild(monthEl);
-            });
-
-            // Create grid with weekday labels
-            const gridContainer = document.getElementById("grid");
-
-            // Add weekday labels
-            weekdays.forEach((day, i) => {
-              const weekdayLabel = document.createElement("div");
-              weekdayLabel.className = "contgrid2024__weekday";
-              weekdayLabel.textContent = day;
-              weekdayLabel.style.gridRow = i * 2 + 1;
-              gridContainer.appendChild(weekdayLabel);
-            });
-
-            // Create cells
-            const rows = 5;
-            const cols = 53;
-            const totalCells = rows * cols;
-            const activePercentage = 0.8;
-
-            for (let i = 0; i < rows; i++) {
-              for (let j = 0; j < cols; j++) {
-                const cell = document.createElement("div");
-                cell.className = "contgrid2024__cell";
-                gridContainer.appendChild(cell);
-              }
-            }
-
-            // Calculate how many cells should be active
-            const numberOfActiveCells = Math.floor(
-              totalCells * activePercentage
-            );
-
-            // Create array of all cell indices and shuffle it
-            let allIndices = Array.from({ length: totalCells }, (_, i) => i);
-            for (let i = allIndices.length - 1; i > 0; i--) {
-              const j = Math.floor(Math.random() * (i + 1));
-              [allIndices[i], allIndices[j]] = [allIndices[j], allIndices[i]];
-            }
-
-            // Take the first 80% of shuffled indices and activate those cells
-            allIndices.slice(0, numberOfActiveCells).forEach((index) => {
-              const cell = gridContainer.children[index + weekdays.length];
-              cell.classList.add("contgrid2024__cell--active");
-              cell.style.setProperty(
-                "--contgrid2024-delay",
-                `${Math.random() * -6}s`
-              );
-            });
-          </script>
-
-          <a
-            href="https://files.x10focus.com/X10Focus.dmg"
-            class="bg-blue-500 text-white px-6 py-3 rounded-lg text-lg"
-            >Download</a
-          >
-          <p class="mt-4 text-gray-600">
-            Be the first to know when we launch and get exclusive early access!
-          </p>
-          <img
-            src="/assets/product-screenshot.png"
-            alt="X10focus App Preview"
-            class="mt-12 mx-auto max-w-3xl rounded-lg shadow-lg"
-          />
         </div>
       </section>
 
