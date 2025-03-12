@@ -2,7 +2,7 @@
 layout: custom
 title: Privacy Policy
 permalink: /privacy-policy/
----------------------------
+---
 
 Last updated: [12-03-2025]
 
