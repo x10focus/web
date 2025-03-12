@@ -4,7 +4,7 @@ title: Privacy Policy
 permalink: /privacy-policy/
 ---
 
-Last updated: [08-09-2024]
+Last updated: [12-03-2025]
 
 1. Introduction
 
