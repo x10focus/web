@@ -4,89 +4,89 @@ title: Privacy Policy
 permalink: /privacy-policy/
 ---
 
-Last updated: [12-03-2025]
+## 1. Acceptance of Terms
 
-## 1. Introduction
+By accessing or using the X10focus app ("the Service"), you agree to be bound by these Terms of Service ("Terms"). If you disagree with any part of the terms, you may not access the Service.
 
-Welcome to the X10focus app ("we", "our", or "us"). We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our X10focus application.
+## 2. Description of Service
 
-## 2. Information We Collect
+X10focus is a Pomodoro Timer application designed to increase productivity and efficiency for IT engineers and managers. The Service includes features such as smart productivity techniques, focus enhancement tools, integration with Google Calendar and Google Tasks, meeting reminders, task management features, and distractibility reduction mechanisms.
 
-Our app integrates with Google and Apple services to provide you with task management and calendar functionalities. We access the following information:
+## 3. User Accounts and Authentication
 
-- Your primary Google or Apple Account email address
-- Your public profile information
-- Calendar data that you can access using Google Calendar
-- Your tasks data
+3.1. To use the Service, you must have a Google or Apple account and authenticate using their respective sign-in services.
 
-## 3. How We Use Your Information
+3.2. By using the Service, you authorize X10focus to request access to your account for authentication and accessing necessary data.
 
-We use the information we collect solely for providing and improving the X10focus app. Specifically:
+3.3. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account.
 
-- To authenticate you and provide access to your account data
-- To display and manage your tasks and calendar events within the app
-- To sync your app data with your Google or Apple account
-- Usage statistics to improve the X10focus app
+3.4. You agree to immediately notify us of any unauthorized use of your account or any other breach of security.
 
-## 4. Data Retention and Deletion
+## 4. Data Collection, Storage, and Responsibilities
 
-For Google Sign In users:
+4.1. **Data Collected**
 
-- Our app does not store your Google user data on our servers. Your data remains stored on Google's servers according to their data retention policies.
+When you sign in using Google or Apple, we collect the following data:
 
-For Apple Sign In users:
+- **User ID**: A unique identifier provided by Google or Apple to distinguish your account.
+- **Email Address**: The primary email associated with your Google or Apple account.
+- **First and Last Name**: Your name as provided by Google or Apple.
+- **Tasks and Calendar Data**: If you grant permissions, we access and store your tasks and calendar data to sync across your devices.
 
-- Tasks are stored on our servers to enable synchronization and accessibility across devices.
-- We retain task data for as long as you use the app and delete it upon account deletion or by user request.
+4.2. **Use of Collected Data**
 
-For all users:
+The collected data is used solely for the purpose of providing and improving the Service, including:
+- User authentication and account management.
+- Synchronization of tasks and calendar events across devices.
+- Personalizing the user experience.
+- Customer support and troubleshooting.
 
-- Any incidental or temporary copies of data created during the app's operation are deleted once the specific task or session is completed.
-- You can request immediate deletion of any stored data by contacting us at [support@x10focus.com](mailto\:support@x10focus.com).
+4.3. **Data Storage**
 
-## 5. Sharing and Disclosure of Data
+- **Google Sign-In Users**: X10focus does not store your Google account credentials. Your data remains stored on Google’s servers according to their retention policies.
+- **Apple Sign-In Users**: Tasks and calendar data are stored on our servers to enable synchronization across devices. We take reasonable precautions to protect your data.
 
-We do not share, transfer, or disclose your account data to any third parties, except in the following limited circumstances:
+4.4. **Data Security**
 
-- When required by law or to comply with a legal process
-- To protect our rights, privacy, safety or property, or that of our users or the public
-- In connection with a sale, merger, or acquisition of all or a portion of our company
+We implement appropriate technical and organizational measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the Internet or electronic storage is 100% secure.
 
-In such cases, we will make reasonable efforts to notify users, unless prohibited by law or court order, or if notification would compromise an investigation or legal proceeding.
+4.5. **Limitation of Liability**
 
-## 6. Data Storage and Security
+The Service is provided on an "AS IS" basis. While we take measures to ensure data integrity, we do not guarantee that stored or processed data will always be available, secure, or free from corruption.
 
-For Google Sign In users:
+X10focus is not responsible for any loss, corruption, or deletion of data due to system failures, unauthorized access, or other unforeseen circumstances. You acknowledge that it is your responsibility to maintain appropriate backups of your data.
 
-- Our app does not permanently store your Google account data. All communication between our app and Google's servers is encrypted using industry-standard protocols.
+## 5. Limitation of Liability
 
-For Apple Sign In users:
+5.1. **No Warranty on Service Availability**: We do not guarantee that the Service will be available at all times, uninterrupted, secure, or error-free. We may suspend or discontinue the Service at any time without prior notice.
 
-- Tasks are stored on our secure servers. We implement industry-standard security measures to protect your data from unauthorized access, loss, or misuse.
+5.2. **Limitation on Indirect or Consequential Damages**: X10focus shall not be liable for any indirect, incidental, consequential, special, or punitive damages, including but not limited to loss of data, profits, or business opportunities, even if we have been advised of the possibility of such damages.
 
-## 7. Third-Party Services
+5.3. **User Responsibility for Account Security**: You are solely responsible for maintaining the confidentiality of your authentication credentials and for all activities that occur under your account. We are not liable for any unauthorized access due to your failure to protect your account.
 
-We use Google and Apple APIs to provide core functionalities of our app. Please refer to their respective Privacy Policies for more information on how they process your data:
+5.4. **No Liability for Third-Party Services**: The Service integrates with third-party platforms such as Google and Apple. We are not responsible for the availability, accuracy, or security of data stored on or accessed from third-party services.
 
-- Google Privacy Policy: [https://policies.google.com/privacy](https://policies.google.com/privacy)
-- Apple Privacy Policy: [https://www.apple.com/legal/privacy/](https://www.apple.com/legal/privacy/)
+5.5. **Force Majeure Clause**: We shall not be liable for any failure or delay in performance due to circumstances beyond our reasonable control, including but not limited to natural disasters, acts of war, strikes, power failures, internet service disruptions, or cyberattacks.
 
-## 8. Your Data Rights
+5.6. **Maximum Liability Cap**: To the fullest extent permitted by applicable law, our total liability for any claim arising out of or relating to these Terms shall not exceed the amount you paid for the Service in the past six (6) months, or $10, whichever is greater.
 
-You can revoke our app's access to your Google or Apple account at any time by visiting your account settings:
+## 6. Disclaimer
 
-- Google: [https://myaccount.google.com/permissions](https://myaccount.google.com/permissions)
-- Apple: [https://appleid.apple.com/](https://appleid.apple.com/)
+Your use of the Service is at your sole risk. The Service is provided on an "AS IS" and "AS AVAILABLE" basis. The Service is provided without warranties of any kind, whether express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, non-infringement, or course of performance.
 
-## 9. Children's Privacy
+## 7. Governing Law
 
-Our app is not intended for children under 13. We do not knowingly collect personal information from children under 13.
+These Terms shall be governed and construed in accordance with the laws of the United Arab Emirates, without regard to its conflict of law provisions.
 
-## 10. Changes to This Privacy Policy
+## 8. Changes to Terms
 
-We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.
+We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.
 
-## 11. Contact Us
+## 9. Contact Us
 
-\*If you have any questions about this Privacy Policy, please contact us at: \*[support@x10focus.c](mailto\:support@x10focus.com)[*om*](mailto\:support@x10focus.com)
+If you have any questions about these Terms, please contact us at support@x10focus.com.
+
+By using X10focus, you acknowledge that you have read and understood these Terms of Service and agree to be bound by them.
+
+Last updated: [12.03.2025]
 
