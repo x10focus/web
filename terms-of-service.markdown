@@ -4,93 +4,64 @@ title: "X10focus: Terms of Service"
 permalink: /terms-of-service/
 ---
 
-## 1. Acceptance of Terms
+1. Acceptance of Terms
 
 By accessing or using the X10focus app ("the Service"), you agree to be bound by these Terms of Service ("Terms"). If you disagree with any part of the terms, you may not access the Service.
 
-## 2. Description of Service
+2. Description of Service
 
 X10focus is a Pomodoro Timer application designed to increase productivity and efficiency for IT engineers and managers. The Service includes features such as smart productivity techniques, focus enhancement tools, integration with Google Calendar and Google Tasks, meeting reminders, task management features, and distractibility reduction mechanisms.
 
-## 3. User Accounts and Authentication
+3. User Accounts and Authentication
 
-3.1. To use the Service, you must have a Google account and authenticate using OAuth 2.0.
+3.1. To use the Service, you must have a Google or Apple account and authenticate using OAuth 2.0.
 
-3.2. By using the Service, you authorize X10focus to request access to your Google account using OAuth 2.0 for the purposes of authentication and accessing necessary data.
+3.2. By using the Service, you authorize X10focus to request access to your account using OAuth 2.0 for the purposes of authentication and accessing necessary data.
 
-3.3. You are responsible for maintaining the confidentiality of your Google account credentials and for all activities that occur under your account.
+3.3. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account.
 
 3.4. You agree to immediately notify us of any unauthorized use of your account or any other breach of security.
 
-## 4. Google Services Integration and Permissions
+4. Data Storage and Responsibilities
 
-4.1. The Service integrates with Google Calendar and Google Tasks. By using these features, you explicitly grant X10focus permission to:
+4.1. For Google Sign In users: X10focus does not store your Google account data. Your data remains stored on Google’s servers according to their retention policies.
 
-   a) Access your Google Calendar data, including reading, writing, and modifying events.
-   b) Access your Google Tasks data, including reading, creating, updating, and deleting tasks.
+4.2. For Apple Sign In users: Tasks are stored on our servers to enable synchronization across devices. We take reasonable precautions to protect your data.
 
-4.2. X10focus will request only the minimum necessary permissions required to provide the Service.
+4.3. The Service is provided on an "AS IS" basis, and while we take measures to ensure data integrity, we do not guarantee that stored or processed data will always be available, secure, or free from corruption.
 
-4.3. You have the right to revoke these permissions at any time through your Google account settings. However, doing so may limit or prevent your use of certain features of the Service.
+4.4. Limitation of Liability: X10focus is not responsible for any loss, corruption, or deletion of data, whether due to system failures, unauthorized access, or other unforeseen circumstances. You acknowledge that it is your responsibility to maintain appropriate backups of your data.
 
-4.4. You are responsible for complying with Google's terms of service in relation to your use of Google services through our Service.
+5. Limitation of Liability
 
-4.5. X10focus does not store your Google account password. Authentication is handled securely through Google's OAuth 2.0 protocol.
+5.1. No Warranty on Service Availability: We do not guarantee that the Service will be available at all times, uninterrupted, secure, or error-free. We may suspend or discontinue the Service at any time without prior notice.
 
-## 5. Privacy and Data Protection
+5.2. Limitation on Indirect or Consequential Damages: X10focus shall not be liable for any indirect, incidental, consequential, special, or punitive damages, including but not limited to loss of data, profits, or business opportunities, even if we have been advised of the possibility of such damages.
 
-5.1. Your use of the Service is also governed by our Privacy Policy, which is incorporated into these Terms by reference.
+5.3. User Responsibility for Account Security: You are solely responsible for maintaining the confidentiality of your authentication credentials and for all activities that occur under your account. We are not liable for any unauthorized access due to your failure to protect your account.
 
-5.2. You consent to the collection, processing, and storage of your personal data as described in our Privacy Policy.
+5.4. No Liability for Third-Party Services: The Service integrates with third-party platforms such as Google and Apple. We are not responsible for the availability, accuracy, or security of data stored on or accessed from third-party services.
 
-5.3. We implement appropriate technical and organizational measures to ensure a level of security appropriate to the risk of processing your personal data.
+5.5. Force Majeure Clause: We shall not be liable for any failure or delay in performance due to circumstances beyond our reasonable control, including but not limited to natural disasters, acts of war, strikes, power failures, internet service disruptions, or cyberattacks.
 
-## 6. Intellectual Property
+5.6. Maximum Liability Cap: To the fullest extent permitted by applicable law, our total liability for any claim arising out of or relating to these Terms shall not exceed the amount you paid for the Service in the past six (6) months, or $10, whichever is greater.
 
-6.1. The Service and its original content, features, and functionality are owned by X10focus and are protected by international copyright, trademark, patent, trade secret, and other intellectual property or proprietary rights laws.
+6. Disclaimer
 
-6.2. You may not copy, modify, create derivative works of, publicly display, publicly perform, republish, download, store, or transmit any of the material on our Service, except as incidental to normal web browsing or as expressly authorized by us.
+Your use of the Service is at your sole risk. The Service is provided on an "AS IS" and "AS AVAILABLE" basis. The Service is provided without warranties of any kind, whether express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, non-infringement, or course of performance.
 
-## 7. Prohibited Uses
+7. Governing Law
 
-You may use the Service only for lawful purposes and in accordance with these Terms. You agree not to use the Service:
+These Terms shall be governed and construed in accordance with the laws of the United Arab Emirates, without regard to its conflict of law provisions.
 
-7.1. In any way that violates any applicable federal, state, local, or international law or regulation.
-
-7.2. To transmit, or procure the sending of, any advertising or promotional material, including any "junk mail," "chain letter," "spam," or any other similar solicitation.
-
-7.3. To impersonate or attempt to impersonate X10focus, a X10focus employee, another user, or any other person or entity.
-
-7.4. To engage in any other conduct that restricts or inhibits anyone's use or enjoyment of the Service, or which, as determined by us, may harm X10focus or users of the Service or expose them to liability.
-
-## 8. Termination
-
-8.1. We may terminate or suspend your access to the Service immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever and without limitation, including but not limited to a breach of the Terms.
-
-8.2. Upon termination, your right to use the Service will immediately cease.
-
-8.3. You may terminate your use of the Service at any time by revoking X10focus's access to your Google account and uninstalling the application.
-
-## 9. Limitation of Liability
-
-In no event shall X10focus, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of or inability to access or use the Service.
-
-## 10. Disclaimer
-
-Your use of the Service is at your sole risk. The Service is provided on an "AS IS" and "AS AVAILABLE" basis. The Service is provided without warranties of any kind, whether express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, non-infringement or course of performance.
-
-## 11. Governing Law
-
-These Terms shall be governed and construed in accordance with the laws of United Arab Emirates, without regard to its conflict of law provisions.
-
-## 12. Changes to Terms
+8. Changes to Terms
 
 We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.
 
-## 13. Contact Us
+9. Contact Us
 
 If you have any questions about these Terms, please contact us at support@x10focus.com.
 
 By using X10focus, you acknowledge that you have read and understood these Terms of Service and agree to be bound by them.
 
-Last updated: [10.09.2024]
+Last updated: [12.03.2025]
